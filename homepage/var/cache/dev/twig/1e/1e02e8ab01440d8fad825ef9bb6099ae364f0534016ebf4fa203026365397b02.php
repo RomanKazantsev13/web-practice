@@ -60,7 +60,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
     ";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 47
+        // line 49
         echo "    </body>
 </html>
 ";
@@ -103,7 +103,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
 
         // line 7
         echo "        <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/app.bd1c8dc6.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/style-webpack.css"), "html", null, true);
         echo "\">
       ";
         
@@ -130,8 +130,10 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
         </header>
         <article>
           <h1>Роман Казанцев</h1>
-          <p>Я студент ПС-14. До того, как поступить в Волгатех на это направление я не увлекался программированием и всем, что с этим направлением связано. Несмотря на это, я мне удается хорошо решать различные задачи и получать за это высокие баллы. На мой взгляд самое главное в процессе обучения это мотивация.</p>
-          <img src=\"Images/Roman.jpg\" alt=\"my photo\">
+          <p>
+\t    Я студент ПС-14. До того, как поступить в Волгатех на это направление я не увлекался программированием и всем, что с этим направлением связано. Несмотря на это, мне удается хорошо решать различные задачи и получать за это высокие баллы. На мой взгляд самое главное в процессе обучения это мотивация.
+\t  </p>
+          <img src=\"images/Roman.jpg\" alt=\"my photo\">
           <div class=\"my_hobbies\">
             <h2>Мои увлечения</h2>
             <ul>
@@ -146,7 +148,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
               <li>Их тоже нет</li>
               <li>так как</li>
               <li>единственное хобби</li>
-              <li>на ближацшие 3,5 года</li>
+              <li>на ближайшие 3,5 года</li>
               <li>это учеба на ПС</li>
             </ol>
           </div>
@@ -175,7 +177,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
 
     public function getDebugInfo()
     {
-        return array (  128 => 12,  118 => 11,  105 => 7,  95 => 6,  76 => 5,  64 => 47,  62 => 11,  58 => 9,  56 => 6,  52 => 5,  46 => 1,);
+        return array (  128 => 12,  118 => 11,  105 => 7,  95 => 6,  76 => 5,  64 => 49,  62 => 11,  58 => 9,  56 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -186,7 +188,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
       <meta charset=\"UTF-8\">
       <title>{% block title %}Roman Kazantsev{% endblock %}</title>
       {% block stylesheet %}
-        <link rel=\"stylesheet\" href=\"{{ asset('build/app.bd1c8dc6.css') }}\">
+        <link rel=\"stylesheet\" href=\"{{ asset('assets/css/style-webpack.css') }}\">
       {% endblock %}
     </head>
     <body>
@@ -196,8 +198,10 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
         </header>
         <article>
           <h1>Роман Казанцев</h1>
-          <p>Я студент ПС-14. До того, как поступить в Волгатех на это направление я не увлекался программированием и всем, что с этим направлением связано. Несмотря на это, я мне удается хорошо решать различные задачи и получать за это высокие баллы. На мой взгляд самое главное в процессе обучения это мотивация.</p>
-          <img src=\"Images/Roman.jpg\" alt=\"my photo\">
+          <p>
+\t    Я студент ПС-14. До того, как поступить в Волгатех на это направление я не увлекался программированием и всем, что с этим направлением связано. Несмотря на это, мне удается хорошо решать различные задачи и получать за это высокие баллы. На мой взгляд самое главное в процессе обучения это мотивация.
+\t  </p>
+          <img src=\"images/Roman.jpg\" alt=\"my photo\">
           <div class=\"my_hobbies\">
             <h2>Мои увлечения</h2>
             <ul>
@@ -212,7 +216,7 @@ class __TwigTemplate_dca934a9a18c57d35c7342bfacbe5fca765009cd4287e257cb1ffa85e10
               <li>Их тоже нет</li>
               <li>так как</li>
               <li>единственное хобби</li>
-              <li>на ближацшие 3,5 года</li>
+              <li>на ближайшие 3,5 года</li>
               <li>это учеба на ПС</li>
             </ol>
           </div>
