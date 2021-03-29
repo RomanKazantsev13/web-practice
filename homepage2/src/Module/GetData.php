@@ -31,10 +31,9 @@ class GetData
     public function addData()
     {
         $topic[] = [
-            'block' => [
-                'header' => $this->theme, 
-                'images' => $this->getArrayUrls() 
-            ]
+            'header' => $this->theme, 
+            'images' => $this->getArrayUrls() 
+
         ];
         return $topic;
     }

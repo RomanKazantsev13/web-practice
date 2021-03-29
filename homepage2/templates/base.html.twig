@@ -44,8 +44,8 @@
 
     {% for theme in topic %}
       <div class="topic">
-        <div class="topic__header">{{ theme.block.header }}</div> 
-        {% for image in theme.block.images %}
+        <div class="topic__header">{{ theme.header }}</div> 
+        {% for image in theme.images %}
           <img src="{{ image }}" alt="" class="topic__image">
         {% endfor%}     
         <div class="clear"></div>
