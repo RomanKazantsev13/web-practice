@@ -5,8 +5,8 @@ use IvanUskov\ImageSpider\ImageSpider;
 
 class GetData
 {
-    private string $theme;
-    private array $urls;
+    private array $images;
+    private array $topic;
 
     public function setTopic(string $theme)
     {
@@ -16,20 +16,31 @@ class GetData
     public function getUrls()
     {
         $this->urls = ImageSpider::find($this->theme);
-        // $image = $imageUrls[mt_rand(0, count($imageUrls) - 1)];
-        // return $image;
     }
 
-    public function getImages(): array
+    public function getArrayUrls(): array
     {
         $this->getUrls();
-        $images = [];
-        for ($i=0, $i < 4; $i++;)
+        for ($i=0; $i < 5; $i++)
         {
-            $photo = $this->urls[mt_rand(0, count($urls) - 1)];
-            $images[] = $photo;
+            $images[] = $this->urls[mt_rand(0, count($this->urls) - 1)];
         }
         return $images;
     }
 
+    public function addData()
+    {
+        $topic[] = [
+            'block' => [
+                'header' => $this->theme, 
+                'images' => $this->getArrayUrls() 
+            ]
+        ];
+        return $topic;
+    }
+
+    public function getData()
+    {
+        return $this->addData();
+    }
 }

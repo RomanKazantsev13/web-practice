@@ -42,15 +42,15 @@
       </div>
     </article>
 
-    {#topic-block#}
+    {% for theme in topic %}
       <div class="topic">
-        <div class="topic__header">hi</div> 
-        {% for image in images %}
+        <div class="topic__header">{{ theme.block.header }}</div> 
+        {% for image in theme.block.images %}
           <img src="{{ image }}" alt="" class="topic__image">
         {% endfor%}     
         <div class="clear"></div>
       </div>
-    {#end-topic-block#}
+    {% endfor%} 
 
     <footer>
       <p>Copyright &#169;Frontend 2021</p>

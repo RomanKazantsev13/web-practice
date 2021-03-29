@@ -8,13 +8,22 @@ class HomePageController extends AbstractController
 {   
     public function index()
     {
-        $topic = new GetData(); //использовать функции из класса GetData только для переменной topic
+        $topic = new GetData();
 
-        $theme = 'Город';
-        $topic->setTopic($theme); 
+        $theme = 'Car';
+        $topic->setTopic($theme);
+        $topic->addData();
+
+        $theme = 'House';
+        $topic->setTopic($theme);
+        $topic->addData();
+
+        $theme = 'Forest';
+        $topic->setTopic($theme);
+        $topic->addData();
 
         return $this->render('base.html.twig',[
-            'images' => $topic->getImages()
+            'topic' => $topic-> getData()
         ]);
     }
 
