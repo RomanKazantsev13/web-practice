@@ -30,16 +30,14 @@ class GetData
 
     public function addData()
     {
-        $topic[] = [
+        $this->topic[] = [
             'header' => $this->theme, 
             'images' => $this->getArrayUrls() 
-
         ];
-        return $topic;
     }
 
     public function getData()
     {
-        return $this->addData();
+        return $this->topic;
     }
 }

@@ -18,7 +18,7 @@ class HomePageController extends AbstractController
         $topic->setTopic($theme);
         $topic->addData();
 
-        $theme = 'Forest';
+        $theme = 'Computer';
         $topic->setTopic($theme);
         $topic->addData();
 
