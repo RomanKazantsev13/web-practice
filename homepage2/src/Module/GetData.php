@@ -6,7 +6,6 @@ use IvanUskov\ImageSpider\ImageSpider;
 class GetData
 {
     private array $images;
-    private array $topic;
 
     public function setTopic(string $theme)
     {
