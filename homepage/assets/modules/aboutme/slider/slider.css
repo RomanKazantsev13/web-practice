@@ -38,6 +38,7 @@
 
 #slidewrapper li {
     width: calc(100%/4);
+    height: 500px;
     list-style: none;
     display: inline;
     float: left;

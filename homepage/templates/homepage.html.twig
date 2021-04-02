@@ -55,10 +55,11 @@
     <div id="block-for-slider">
         <div id="viewport">
             <ul id="slidewrapper">
-                <li class="slide"><img src="images-slider/image-11.jpg" alt="1" class="slide-img"></li>
-                <li class="slide"><img src="images-slider/image-12.jpg" alt="2" class="slide-img"></li>
-                <li class="slide"><img src="images-slider/image-13.jpg" alt="3" class="slide-img"></li>
-                <li class="slide"><img src="images-slider/image-14.jpg" alt="4" class="slide-img"></li>
+              {% for image in imagesSlider %}
+                <li class="slide">
+                  <img src="{{ image }}" alt="1" class="slide-img">
+                </li>
+              {% endfor%}  
             </ul>
         </div>
     </div>

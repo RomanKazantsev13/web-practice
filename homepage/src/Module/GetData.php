@@ -36,8 +36,23 @@ class GetData
         ];
     }
 
-    public function getData()
+    public function getRundData()
     {
         return $this->topic;
+    }
+
+    public function getImagesSlider(): array
+    {
+        $this->getUrls();
+        for ($i=0; $i < 10; $i++)
+        {
+            $imagesSlider[] = $this->urls[rand(0, count($this->urls) - 1)];
+        }
+        return $imagesSlider;
+    }
+
+    public function getSliderData()
+    {
+        return $this->getImagesSlider();
     }
 }
