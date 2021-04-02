@@ -1,3 +1,0 @@
-homepage:
-    path: /homepage
-    controller: App\Controller\HomePageController::index
