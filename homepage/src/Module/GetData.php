@@ -5,7 +5,8 @@ use IvanUskov\ImageSpider\ImageSpider;
 
 class GetData
 {
-    private array $images;
+    private string $theme;
+    private array $urls;
 
     public function setTopic(string $theme)
     {

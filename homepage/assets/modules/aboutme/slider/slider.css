@@ -1,66 +1,10 @@
-body
-{ 
-	font-family: Comic Sans MS;
-}
-
-header
-{
-	width: 1000px; 
-	margin: 0 auto;
-}
-
-article
-{
-	width: 770px;
-	margin: 0 auto;
-}
-
-.deb
-{
-	margin-top: 20px;
-	margin-right: 50px;
-	width: 330px; 
-	height: 350px;
-	border-radius: 5px;
-	float: left;
-}
-
-h1
-{
-	font: 600 40px/42px Comic Sans Ms;
-    text-align: center;
-}
-
-h2
-{
-    margin-top: 20px;
-}
-
-.my_hobbies
-{
-	float: left;
-}
-
-.clear
-{
-	clear: both;
-}
-
-footer
-{
-	margin-top: 20px;
-	text-align: center;
-}
-
-#block-for-slider 
-{
+#block-for-slider {
     width: 800px;
     margin: 0 auto;
     margin-top: 100px;
 }
 
-#viewport 
-{
+#viewport {
     width: 100%;
     display: table;
     position: relative;
@@ -72,8 +16,7 @@ footer
     user-select: none;
 }
 
-#slidewrapper 
-{
+#slidewrapper {
     position: relative;
     width: calc(100% * 4);
     top: 0;
@@ -88,21 +31,18 @@ footer
     transition-timing-function: ease-in-out;
 }
 
-#slidewrapper ul, #slidewrapper li 
-{
+#slidewrapper ul, #slidewrapper li {
     margin: 0;
     padding: 0;
 }
 
-#slidewrapper li 
-{
+#slidewrapper li {
     width: calc(100%/4);
     list-style: none;
     display: inline;
     float: left;
 }
 
-.slide-img 
-{
+.slide-img {
     width: 100%;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Roman Kazantsev</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
   </head>
   <body>
 
@@ -52,9 +52,22 @@
       </div>
     {% endfor%} 
 
+    <div id="block-for-slider">
+        <div id="viewport">
+            <ul id="slidewrapper">
+                <li class="slide"><img src="images-slider/image-11.jpg" alt="1" class="slide-img"></li>
+                <li class="slide"><img src="images-slider/image-12.jpg" alt="2" class="slide-img"></li>
+                <li class="slide"><img src="images-slider/image-13.jpg" alt="3" class="slide-img"></li>
+                <li class="slide"><img src="images-slider/image-14.jpg" alt="4" class="slide-img"></li>
+            </ul>
+        </div>
+    </div>
+
     <footer>
       <p>Copyright &#169;Frontend 2021</p>
     </footer>
-
+    
+    <script src="{{ asset('build/app.js') }}"></script>
+    
   </body>
 </html>
