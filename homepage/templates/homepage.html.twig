@@ -12,13 +12,13 @@
     </header>
 
     <article>
-      <h1>Роман Казанцев</h1>
+      <h1 class="title">Роман Казанцев</h1>
       <p>
         Я студент ПС-14. До того, как поступить в Волгатех на это направление я не увлекался программированием и всем, что с этим направлением связано. Несмотря на это, мне удается хорошо решать различные задачи и получать за это высокие баллы. На мой взгляд самое главное в процессе обучения это мотивация.
       </p>
       <img class="my-photo photo" src="images/Roman.jpg" alt="my photo">
       <div class="my-hobbies">
-        <h2>Мои увлечения</h2>
+        <h2 class="my-hobbies-header">Мои увлечения</h2>
         <ul>
           <li>Их нет</li>
           <li>так как</li>
@@ -26,7 +26,7 @@
           <li>уходит</li>
           <li>на учебу</li>
         </ul>
-        <h2>Мои хобби</h2>
+        <h2 class="my-hobbies-header">Мои хобби</h2>
         <ol>
           <li>Их тоже нет</li>
           <li>так как</li>
@@ -55,7 +55,7 @@
     <div id="block-for-slider">
         <div id="viewport">
             <ul id="slidewrapper">
-              {% for image in imagesSlider %}
+              {% for image in urlsSlider %}
                 <li class="slide">
                   <img src="{{ image }}" alt="1" class="slide-img">
                 </li>

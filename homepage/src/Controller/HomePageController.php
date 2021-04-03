@@ -2,15 +2,15 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Module\GetData;
+use App\Module\GetArrayRundUrls;
 use App\Module\GetSliderImages;
 
 class HomePageController extends AbstractController 
 {   
     public function index()
     {
-        $topic = new GetData();
-        $imagesSlider = new GetSliderImages();
+        $topic = new GetArrayRundUrls();
+        $slider = new GetSliderImages();
 
         $theme = 'Car';
         $topic->setTopic($theme);
@@ -25,8 +25,8 @@ class HomePageController extends AbstractController
         $topic->addData();
 
         return $this->render('homepage.html.twig',[
-            'topic' => $topic->getRundData(),
-            'imagesSlider' => $imagesSlider->getSliderData()
+            'topic' => $topic->getData(),
+            'urlsSlider' => $slider->getSliderData()
         ]);
     }
 

@@ -1,9 +1,10 @@
 <?php
 namespace App\Module;
+
 use IvanUskov\ImageSpider\ImageSpider;
 
 
-class GetData
+class GetArrayRundUrls
 {
     private string $theme;
     private array $urls;
@@ -23,9 +24,9 @@ class GetData
         $this->getUrls();
         for ($i=0; $i < 5; $i++)
         {
-            $images[] = $this->urls[rand(0, count($this->urls) - 1)];
+            $arrayUrls[] = $this->urls[rand(0, count($this->urls) - 1)];
         }
-        return $images;
+        return $arrayUrls;
     }
 
     public function addData()
@@ -36,23 +37,8 @@ class GetData
         ];
     }
 
-    public function getRundData()
+    public function getData()
     {
         return $this->topic;
-    }
-
-    public function getImagesSlider(): array
-    {
-        $this->getUrls();
-        for ($i=0; $i < 10; $i++)
-        {
-            $imagesSlider[] = $this->urls[rand(0, count($this->urls) - 1)];
-        }
-        return $imagesSlider;
-    }
-
-    public function getSliderData()
-    {
-        return $this->getImagesSlider();
     }
 }
