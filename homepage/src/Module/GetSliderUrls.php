@@ -3,7 +3,7 @@ namespace App\Module;
 use IvanUskov\ImageSpider\ImageSpider;
 
 
-class GetSliderImages
+class GetSliderUrls
 {
     private array $urls;
 

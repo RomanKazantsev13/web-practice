@@ -3,14 +3,14 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Module\GetArrayRundUrls;
-use App\Module\GetSliderImages;
+use App\Module\GetSliderUrls;
 
 class HomePageController extends AbstractController 
 {   
     public function index()
     {
         $topic = new GetArrayRundUrls();
-        $slider = new GetSliderImages();
+        $slider = new GetSliderUrls();
 
         $theme = 'Car';
         $topic->setTopic($theme);
