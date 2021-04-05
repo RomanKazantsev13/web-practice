@@ -5,11 +5,12 @@ use IvanUskov\ImageSpider\ImageSpider;
 
 class GetSliderUrls
 {
+    private string $url;
     private array $urls;
 
     public function getUrls()
     {
-        $this->urls = ImageSpider::find("Sportcar");
+        $this->urls = ImageSpider::find("Porshe");
     }
 
     public function getArrayUrls(): array
