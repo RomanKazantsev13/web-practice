@@ -1,5 +1,5 @@
-require('./modules/aboutme/components/about_me.css');
+import('./modules/aboutme/components/about_me.css');
 
-require('./modules/aboutme/slider/slider.css');
-require('./modules/aboutme/slider/slider.js');
+import('./modules/aboutme/slider/slider.css');
+import('./modules/aboutme/slider/slider.js');
 

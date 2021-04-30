@@ -12,17 +12,11 @@ class HomePageController extends AbstractController
         $topic = new GetArrayRundUrls();
         $slider = new GetSliderUrls();
 
-        $theme = 'Car';
-        $topic->setTopic($theme);
-        $topic->addData();
+        $topic->addData('Car');
 
-        $theme = 'House';
-        $topic->setTopic($theme);
-        $topic->addData();
+        $topic->addData('House');
 
-        $theme = 'Computer';
-        $topic->setTopic($theme);
-        $topic->addData();
+        $topic->addData('Computer');
 
         return $this->render('homepage.html.twig',[
             'topic' => $topic->getData(),

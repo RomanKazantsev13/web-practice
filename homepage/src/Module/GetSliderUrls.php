@@ -5,7 +5,6 @@ use IvanUskov\ImageSpider\ImageSpider;
 
 class GetSliderUrls
 {
-    private string $url;
     private array $urls;
 
     public function getUrls()
@@ -16,7 +15,7 @@ class GetSliderUrls
     public function getArrayUrls(): array
     {
         $this->getUrls();
-        for ($i=0; $i < 4; $i++)
+        for ($i = 0; $i < 4; $i++)
         {
             $arrayUrls[] = $this->urls[rand(0, count($this->urls) - 1)];
         }
