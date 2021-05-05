@@ -3,8 +3,9 @@
 namespace App\Modules\AboutMe\Infrastructure;
 
 use IvanUskov\ImageSpider\ImageSpider;
+use App\Modules\AboutMe\App\ImageProviderInterface;
 
-class ImageProvider
+class ImageProvider implements ImageProviderInterface
 {
     const QUANTITY_IMAGES = 5;
 

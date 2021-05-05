@@ -2,10 +2,12 @@
 
 namespace App\Modules\AboutMe\Infrastructure;
 
-class ConstHobbieConfiguration
+use App\Modules\AboutMe\App\HobbieConfigurationInterface;
+
+class ConstHobbieConfiguration implements HobbieConfigurationInterface
 {
     function getHobbieMap(): array
     {
-        return ['House', 'Computer', 'Car'];
+        return ['Hockey', 'Computer', 'Car'];
     }
 }
