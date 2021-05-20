@@ -46,38 +46,22 @@
     </article>
 
     {% for theme in array %}
-      <div class="topic">
-        <div class="topic__header">{{ theme.header }}</div>
-        {% for image in theme.images %}
-          <img src="{{ image }}" alt="" class="topic__image">
-        {% endfor%}
-        <div class="clear"></div>
+    <p class="title">{{ theme.header}} </p>
+    <div class="ant-carousel" id="{{ theme.header }}">
+      <div class="ant-carousel-hider">
+        <ul class="ant-carousel-list">
+        {% for image in theme.images %}   
+          <li class="ant-carousel-element">
+            <img class="ant-img" src="{{ image }}" alt="0">
+          </li>
+        {% endfor %}
+        </ul>
       </div>
-    {% endfor%}
-
-{#    <div id="block-for-slider">#}
-{#      <div id="viewport">#}
-{#        <ul id="slidewrapper">#}
-{#          {% for image in urlsSlider %}#}
-{#            <li class="slide">#}
-{#              <img src="{{ image }}" alt="1" class="slide-img">#}
-{#            </li>#}
-{#          {% endfor%}#}
-{#        </ul>#}
-
-{#        <div id="prev-next-btns">#}
-{#            <div id="prev-btn"></div>#}
-{#            <div id="next-btn"></div>#}
-{#        </div>#}
-
-{#        <ul id="nav-btns">#}
-{#          <li class="slide-nav-btn"></li>#}
-{#          <li class="slide-nav-btn"></li>#}
-{#          <li class="slide-nav-btn"></li>#}
-{#          <li class="slide-nav-btn"></li>#}
-{#        </ul>#}
-{#      </div>#}
-{#    </div>#}
+      <div class="ant-carousel-arrow-left"></div>
+      <div class="ant-carousel-arrow-right"></div>
+      <div class="ant-carousel-dots"></div>
+    </div>
+    {% endfor %}
 
     <footer>
       <p>Copyright &#169;Frontend 2021</p>
@@ -85,7 +69,6 @@
 
     <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('build/vendors-node_modules_core-js_modules_web_timers_js.js') }}"></script>
     
   </body>
 </html>
