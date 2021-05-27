@@ -10,21 +10,27 @@ class HobbieService
 {
     public array $result;
 
-    function getHobbies(): array
+    public function __construct(
+                                HobbieConfigurationInterface $exempl,
+                                ImageProviderInterface $imageUrls
+                               )
     {
-        $themes = new ConstHobbieConfiguration();
-        $headers = $themes->getHobbieMap(); 
-        foreach ($headers as $header)
+        $this->exempl = $exempl->getHobbieMap();
+        $this->imageUrls = $imageUrls;
+    }
+
+    public function getHobbies(): array
+    {
+        foreach ($this->exempl as $header)
         {
            $this->addHobbie($header);
         }
         return $this->result;
     }
 
-    function addHobbie($theme)
+    private function addHobbie($theme)
     {
-        $imageUrls = new ImageProvider();
-        $hobbie = new Hobbie($theme, $imageUrls->getImageUrls($theme));
+        $hobbie = new Hobbie($theme, $this->imageUrls->getImageUrls($theme));
         $this->result[] = [
             $hobbie->getHeader(),
             $hobbie->getArrUrls(),

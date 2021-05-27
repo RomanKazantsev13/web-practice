@@ -8,9 +8,8 @@ use App\Modules\AboutMe\App\HobbieService;
 
 class AboutMeController extends AbstractController
 {
-    function aboutMePage()
+    public function aboutMePage(HobbieService $hobbieService)
     {
-        $hobbieService = new HobbieService();
         $hobbies = $hobbieService->getHobbies();
 
         $aboutMePageView = new AboutMePageView();

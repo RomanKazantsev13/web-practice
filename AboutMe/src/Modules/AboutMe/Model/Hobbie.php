@@ -8,18 +8,18 @@ class Hobbie
     private array $arrUrls;
 
 
-    function __construct($theme, $arrUrls)
+    public function __construct(string $theme, array $arrUrls)
     {
         $this->theme = $theme;
         $this->arrUrls = $arrUrls;
     }
 
-    function getHeader(): string
+    public function getHeader(): string
     {
         return $this->theme;
     }
 
-    function getArrUrls(): array
+    public function getArrUrls(): array
     {
         return $this->arrUrls;
     }

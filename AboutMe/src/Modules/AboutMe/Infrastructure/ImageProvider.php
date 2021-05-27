@@ -7,17 +7,21 @@ use App\Modules\AboutMe\App\ImageProviderInterface;
 
 class ImageProvider implements ImageProviderInterface
 {
-    const QUANTITY_IMAGES = 5;
+    private const QUANTITY_IMAGES = 5;
 
-    function getImageUrls($theme): array
+    public function getImageUrls(string $theme): array
     {
-        $imageUrls = ImageSpider::find($theme);
-
-        for ($i = 0; $i < self::QUANTITY_IMAGES; $i++)
+        $urls = ImageSpider::find($theme);
+        if (count($urls) >= self::QUANTITY_IMAGES)
         {
-            $result[] = $imageUrls[mt_rand(0, (count($imageUrls) - 1))];
-        }
+            $result = [];
+            foreach (array_rand($urls, self::QUANTITY_IMAGES) as $index)
+            {
+                $result[] = $urls[$index];
+            }
 
-        return $result;
+            return $result;
+        }
+        return [];
     }
 }

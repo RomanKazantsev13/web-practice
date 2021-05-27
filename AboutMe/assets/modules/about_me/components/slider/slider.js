@@ -1,3 +1,5 @@
+require('./modules/about_me/components/slider/slider.css');
+
 function Ant(crslId) {
 
 	let id = document.getElementById(crslId);
@@ -228,10 +230,3 @@ Ant.initialize = function(that) {
 		}
 	}
 };
-
-var  items = document.getElementsByClassName("ant-carousel");
-var slider = [];
-
-items.forEach(element => {
-	slider.push(new Ant(element.id))
-});

@@ -8,7 +8,7 @@ class AboutMePageView
     private array $hobbies = [];
     private array $result = [];
 
-    function buildParams($hobbies): array
+    public function buildParams($hobbies): array
     {
         foreach ($hobbies as $hobbie)
         {

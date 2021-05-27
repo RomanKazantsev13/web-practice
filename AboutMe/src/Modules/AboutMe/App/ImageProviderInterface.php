@@ -4,5 +4,5 @@ namespace App\Modules\AboutMe\App;
 
 interface  ImageProviderInterface
 {
-    function getImageUrls($theme);
+    public function getImageUrls(string $theme): array;
 }
