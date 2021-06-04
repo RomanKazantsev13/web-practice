@@ -5,13 +5,13 @@ namespace App\Modules\AboutMe\Model;
 class Hobbie
 {
     private string $theme;
-    private array $arrUrls;
+    private array $images;
 
 
-    public function __construct(string $theme, array $arrUrls)
+    public function __construct(string $theme, array $images)
     {
         $this->theme = $theme;
-        $this->arrUrls = $arrUrls;
+        $this->images = $images;
     }
 
     public function getHeader(): string
@@ -19,8 +19,8 @@ class Hobbie
         return $this->theme;
     }
 
-    public function getArrUrls(): array
+    public function getImages(): array
     {
-        return $this->arrUrls;
+        return $this->images;
     }
 }

@@ -1,10 +1,14 @@
-require('./modules/about_me/about_me.css');
-require('./modules/about_me/components/slider/slider.js');
+require('./about_me.css');
 
+import {Ant} from './components/slider/slider.js'
 
-var  items = document.getElementsByClassName("ant-carousel");
-var slider = [];
+// ajax
 
-items.forEach(element => {
-	slider.push(new Ant(element.id))
-});
+window.onload = () => {
+	const items = document.getElementsByClassName("ant-carousel");
+	let slider = [];
+
+	items.forEach(element => {
+		slider.push(new Ant(element.id))
+	});
+}

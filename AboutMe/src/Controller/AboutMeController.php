@@ -18,4 +18,9 @@ class AboutMeController extends AbstractController
             'array' => $aboutMePageView->buildParams($hobbies),
         ]);
     }
+
+    public function update() 
+    {
+        // запрос update из HobbieService
+    }
 }

@@ -5,18 +5,24 @@ namespace App\Modules\AboutMe\App;
 use App\Modules\AboutMe\Infrastructure\ConstHobbieConfiguration;
 use App\Modules\AboutMe\Model\Hobbie;
 use App\Modules\AboutMe\Infrastructure\ImageProvider;
+use App\Modules\AboutMe\Infrastructure\ImageRepository;
 
 class HobbieService
 {
-    public array $result;
+    private array $result;
+    private string $header;
+    private array $images;
+    private ImageRepository $repository;
 
     public function __construct(
                                 HobbieConfigurationInterface $exempl,
-                                ImageProviderInterface $imageUrls
+                                ImageProviderInterface $imageUrls,
+                                ImageRepository $repository
                                )
     {
         $this->exempl = $exempl->getHobbieMap();
         $this->imageUrls = $imageUrls;
+        $this->repository = $repository;
     }
 
     public function getHobbies(): array
@@ -28,12 +34,18 @@ class HobbieService
         return $this->result;
     }
 
-    private function addHobbie($theme)
+    public function update() 
     {
-        $hobbie = new Hobbie($theme, $this->imageUrls->getImageUrls($theme));
-        $this->result[] = [
-            $hobbie->getHeader(),
-            $hobbie->getArrUrls(),
-        ];
+        foreach ($this->result as $value) {
+            $this->header = $value->getHeader();
+            $this->images = $value->getImages();
+
+            $repository->update($this->header, $this->images);
+        }
+    }
+
+    private function addHobbie(string $theme)
+    {
+        $result[] = new Hobbie($theme, $repository->getImagesByTopic($theme));
     }
 }
