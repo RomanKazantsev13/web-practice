@@ -2,6 +2,7 @@
 
 namespace App\View\AboutMe;
 
+use App\Modules\AboutMe\Model\Hobbie;
 
 class AboutMePageView
 {
@@ -12,9 +13,16 @@ class AboutMePageView
     {
         foreach ($hobbies as $hobbie)
         {
+            $images  = [];
+
+            foreach ($hobbie->getImages() as $value) 
+            {
+                $images[] = $value->getUrl();
+            }
+
             $result[] = [
-                'header' => $hobbie[0],
-                'images' => $hobbie[1],
+                'header' => $hobbie->getHeader(),
+                'images' => $images,
             ];
         }
 

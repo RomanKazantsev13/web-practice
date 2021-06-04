@@ -12,6 +12,7 @@ class AboutMeController extends AbstractController
     {
         $hobbies = $hobbieService->getHobbies();
 
+
         $aboutMePageView = new AboutMePageView();
 
         return $this->render('about_me/about_me.html.twig', [

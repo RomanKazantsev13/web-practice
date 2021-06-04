@@ -36,6 +36,8 @@ class ImageRepository
         $images = $this->repository->findBy([
             'keyword' => $topic
         ]);
+
+        return $images;
     }
 
     public function update(string $topic, array $newImages) // deleteImage() + addImage() + getImagesByTopic()
@@ -47,7 +49,7 @@ class ImageRepository
         }
 
         // добавить надо все картинки! а не одну
-        foreach ($newImage as $image) 
+        foreach ($newImages as $image) 
         {
             $this->addImage($image);
         }
