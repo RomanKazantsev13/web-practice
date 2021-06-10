@@ -8,20 +8,26 @@ use App\Modules\AboutMe\App\HobbieService;
 
 class AboutMeController extends AbstractController
 {
-    public function aboutMePage(HobbieService $hobbieService)
+    private $hobbies;
+    private $aboutMePageView;
+
+    public function __construct(HobbieService $hobbieService)
     {
-        $hobbies = $hobbieService->getHobbies();
+        $this->hobbies = $hobbieService->getHobbies();
+    }
 
-
-        $aboutMePageView = new AboutMePageView();
+    public function aboutMePage()
+    {
+        $this->aboutMePageView = new AboutMePageView();
 
         return $this->render('about_me/about_me.html.twig', [
-            'array' => $aboutMePageView->buildParams($hobbies),
+            'array' => $this->aboutMePageView->buildParams($this->hobbies),
         ]);
     }
 
-    public function update() 
+    public function update(HobbieService $update)
     {
-        // запрос update из HobbieService
+        $update->update();
+        $this->aboutMePage();
     }
 }

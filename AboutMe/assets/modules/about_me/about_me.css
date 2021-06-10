@@ -61,3 +61,16 @@ footer
 	margin-top: 20px;
 	text-align: center;
 }
+.button
+{
+	cursor: pointer;
+	width: 77px;
+	height: 24px;
+	margin: 28px 48px;
+	border: 7px outset blue;
+}
+.button_container
+{
+	width: 800px;
+	margin: 0 auto;
+}

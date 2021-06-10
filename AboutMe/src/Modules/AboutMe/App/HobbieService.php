@@ -31,13 +31,12 @@ class HobbieService
            $this->addHobbie($header);
         }
 
-        $this->update();
-
         return $this->result;
     }
 
     public function update() 
     {
+        $this->getHobbies();
         foreach ($this->result as $value) 
         {
             $header = $value->getHeader();
@@ -51,7 +50,7 @@ class HobbieService
                 $images[] = new Image($header, $value);
             }
 
-           // $this->repository->update($header, $images);
+            $this->repository->update($header, $images);
         }
     }
 
